@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title> SMS SPAM Checker </title>
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1>SMS SPAM Checker!</h1>
+    <h3>(Maintain SMS data and check if it's SPAM or Not)</h3>
+    {% if tasks|length < 1 %}
+        <h2>No SMS found</h2>
+    {% else %}
+        <table>
+            <tr>
+                <th>SMS</th>
+                <th>Date</th>
+                <th>Spam?</th>
+                <th>Actions</th>
+            </tr>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ task.content }}</td>
+                    <td>{{ task.date_created.date() }}</td>
+                    {% if task.spam_check == 0 %}
+                        <td>--</td>
+                    {% elif task.spam_check == 1 %}
+                        <td>SPAM</td>
+                    {% else %}
+                        <td>NOT SPAM</td>
+                    {% endif %}
+                    <td>
+                        <a href="/delete/{{ task.id }}">Delete</a>
+                        <br/>
+                        <a href="/update/{{ task.id }}">Update</a>
+                        <br/>
+                        <a href="/spamCheck/{{ task.id }}">Spam Check</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
+    <form action="/" method="POST">
+        <input type="text" name="content" id="content"/>
+        <input type="submit" name="Add Task"/>
+    </form>
+</div>
+{% endblock %}

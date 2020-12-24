@@ -1,0 +1,14 @@
+body {
+    color: Black;
+    text-align: center;
+    padding: 30px;
+}
+
+.content{
+    text-align: -webkit-center;
+    padding: 20px;
+}
+
+td {
+    padding: 25px;
+}

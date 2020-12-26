@@ -1,7 +1,7 @@
-# flask-model-deploy
+# Flask ML Model Deploy on Heroku.
 
 
-Python Documentation:
+## Python Documentation:
 
 python3 -m virtualenv venv - Create a virtual Environment
 source bin/activate - To Activate
@@ -17,16 +17,19 @@ Microservices:
 4. python3 manage.py migrate
 5. Add this to admin.py -> admin.site.register(Product)
 
-Route -> url.js in src>Name>
+Route > url.js in src > Name
 
 *args - > Any number of args passed to program in function.
 *k2wargs -> key value list of n in function.
 
 Base.html -> default index view
 
+
+```
 {% block content %}
     // anything btw this is replaced in views.
 {% endblock %}
+```
 
 Form:
 Default method - Get

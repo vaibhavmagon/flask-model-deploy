@@ -8,6 +8,12 @@
 - python3 app.py
 
 
+## Database
+- python3
+- from app import db
+- db.create_all()
+
+
 ## Python Documentation:
 
 python3 -m virtualenv venv - Create a virtual Environment

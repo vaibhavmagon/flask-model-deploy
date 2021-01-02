@@ -1,6 +1,13 @@
 # Flask ML Model Deploy on Heroku.
 
 
+## Commands
+
+- source env/bin/activate
+- python3 -m pip install flask flask-sqlalchemy
+- python3 app.py
+
+
 ## Python Documentation:
 
 python3 -m virtualenv venv - Create a virtual Environment

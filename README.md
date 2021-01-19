@@ -4,6 +4,7 @@
 ## Commands
 
 - source env/bin/activate
+- deactivate (to exit)
 - python3 -m pip install flask flask-sqlalchemy
 - python3 app.py
 

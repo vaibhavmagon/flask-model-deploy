@@ -9,6 +9,11 @@ This repository helps establish how a machine learning model (in our case saved 
 - python3 app.py
 
 
+## Tutorial
+
+https://www.youtube.com/watch?v=Z1RJmh_OqeA&ab_channel=freeCodeCamp.org
+
+
 ## Useful Commands
 
 - source env/bin/activate
@@ -21,11 +26,6 @@ This repository helps establish how a machine learning model (in our case saved 
 - python3
 - from app import db
 - db.create_all()
-
-
-## Tutorial
-
-https://www.youtube.com/watch?v=Z1RJmh_OqeA&ab_channel=freeCodeCamp.org
 
 
 ## Python Documentation:
@@ -42,6 +42,7 @@ https://www.youtube.com/watch?v=Z1RJmh_OqeA&ab_channel=freeCodeCamp.org
   - Add this to admin.py -> admin.site.register(Product)
   - Route > url.js in src > Name
 
+
 ## Others:
 *args - > Any number of args passed to program in function.
 *k2wargs -> key value list of n in function.
@@ -56,6 +57,7 @@ Base.html -> default index view
 
 Form:
 Default method - Get
+
 
 ## Maintainer:
 - Vaibhav Magon

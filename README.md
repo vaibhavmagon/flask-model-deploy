@@ -6,6 +6,7 @@ This repository helps establish how a machine learning model (in our case saved 
 
 
 ## Run the Application
+- pip install -r requirements.txt
 - python3 app.py
 
 

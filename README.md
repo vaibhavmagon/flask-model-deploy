@@ -5,22 +5,19 @@
 This repository helps establish how a machine learning model (in our case saved as _vector.pkl_ to run classification) can be deployed as an API using python and flask to cloud via Heroku and also save the details in local Sqlite database. This is an end-to-end deployment and working code (with results generated via model) can be visited here: https://flasktaskappvm.herokuapp.com/. This UI is pretty basic but helps one get a feel on how things can be built.
 
 
+## Setup
+- source env/bin/activate [deactivate (to exit)]
+- python3 -m pip install flask flask-sqlalchemy
+- python3 -m pip install -r requirements.txt
+
+
 ## Run the Application
-- pip install -r requirements.txt
 - python3 app.py
 
 
 ## Tutorial
 
 https://www.youtube.com/watch?v=Z1RJmh_OqeA&ab_channel=freeCodeCamp.org
-
-
-## Useful Commands
-
-- source env/bin/activate
-- deactivate (to exit)
-- python3 -m pip install flask flask-sqlalchemy
-- python3 app.py
 
 
 ## Useful Database Commands

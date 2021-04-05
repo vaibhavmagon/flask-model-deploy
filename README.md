@@ -6,7 +6,7 @@ This repository helps establish how a machine learning model (in our case saved 
 
 
 ## Run the Application
-- - python3 app.py
+- python3 app.py
 
 
 ## Useful Commands

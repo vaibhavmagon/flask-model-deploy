@@ -35,10 +35,10 @@ spec:
             - name: DB_PATH
               value: sqlite:///test.db
           volumeMounts:
-            - name: dbFile
+            - name: dbfile
               mountPath: /usr/src/app/test.db
       volumes:
-        - name: dbFile
+        - name: dbfile
           hostPath:
             path: /Users/twin/Documents/flask-model-deploy/test.db
             type: File

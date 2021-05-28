@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spam-model-service
+  labels:
+    app: spam-model-service
+spec:
+  selector:
+    matchLabels:
+      app: spam-model-service
+  replicas: 1
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: spam-model-service
+    spec:
+      containers:
+        - image: spam-model-service:1.0
+          imagePullPolicy: Never
+          name: spam-model-service
+          ports:
+            - containerPort: 5000
+          resources:
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
+          env:
+            - name: DB_PATH
+              value: sqlite:///test.db
+          volumeMounts:
+            - name: dbFile
+              mountPath: /usr/src/app/test.db
+      volumes:
+        - name: dbFile
+          hostPath:
+            path: /Users/twin/Documents/flask-model-deploy/test.db
+            type: File
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: spam-model-service
+spec:
+  type: NodePort
+  selector:
+    app: spam-model-service
+  ports:
+    - protocol: "TCP"
+      port: 5000
+      targetPort: 5000

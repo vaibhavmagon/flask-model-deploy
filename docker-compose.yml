@@ -4,7 +4,7 @@ services:
     build: .
     volumes:
       - .:/usr/src/app
-      - /Users/twin/Documents/flask-model-deploy/test.db:/usr/src/app/test.db
+      - ~/flask-model-deploy/test.db:/usr/src/app/test.db
     ports:
       - "5000:5000"
     environment:

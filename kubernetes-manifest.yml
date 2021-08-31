@@ -40,7 +40,7 @@ spec:
       volumes:
         - name: dbfile
           hostPath:
-            path: /Users/twin/Documents/flask-model-deploy/test.db
+            path: ~/flask-model-deploy/test.db
             type: File
 
 ---
